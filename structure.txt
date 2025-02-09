@@ -1,0 +1,39 @@
+makkarriz/
+├── app/                          # Code source de l'application
+│   ├── __init__.py               # Initialisation de l'application Flask
+│   ├── api/                      # Contrôleurs et routes de l'API
+│   │   ├── __init__.py
+│   │   ├── auth.py               # Routes pour l'authentification
+│   │   ├── analysis.py           # Routes pour l'analyse de code
+│   │   ├── report.py             # Routes pour la génération de rapports
+│   ├── models/                   # Modèles de base de données
+│   │   ├── __init__.py
+│   │   ├── analysis.py           # Modèle pour les résultats d'analyse
+│   ├── services/                 # Services métier
+│   │   ├── __init__.py
+│   │   ├── code_analyzer.py      # Service pour l'analyse de code
+│   │   ├── report_generator.py   # Service pour la génération de rapports
+│   ├── utils/                    # Utilitaires
+│   │   ├── __init__.py
+│   │   ├── logger.py             # Configuration des logs
+│   │   ├── security.py           # Fonctions de sécurité (JWT, etc.)
+│   ├── templates/                # Templates HTML (pour les rapports)
+│   │   ├── report_template.html
+│   ├── static/                   # Fichiers statiques (CSS, JS, etc.)
+│   │   ├── styles.css
+├── tests/                        # Tests unitaires et fonctionnels
+│   ├── __init__.py
+│   ├── test_auth.py
+│   ├── test_analysis.py
+│   ├── test_report.py
+├── migrations/                   # Migrations de la base de données (Flask-Migrate)
+├── config/                       # Configuration de l'application
+│   ├── __init__.py
+│   ├── config.py                 # Configuration générale
+│   ├── dev.py                    # Configuration pour l'environnement de développement
+│   ├── prod.py                   # Configuration pour l'environnement de production
+├── requirements.txt              # Dépendances du projet
+├── run.py                        # Point d'entrée pour lancer l'application
+├── Dockerfile                    # Configuration Docker
+├── docker-compose.yml            # Configuration Docker Compose
+├── README.md                     # Documentation du projet~

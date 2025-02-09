@@ -1,0 +1,34 @@
+<div class="container mt-4">
+    <h2>Vos Projets</h2>
+    <a href="/creer-projet" class="btn btn-primary mb-3">Nouveau Projet</a>
+    
+    <div class="list-group">
+        {% for projet in projets %}
+        <div class="list-group-item">
+            <h5>{{ projet.nom }}</h5>
+            <small>Créé le : {{ projet.date_scan.strftime('%d/%m/%Y') }}</small>
+            <a href="/projet/{{ projet.id_projet }}" class="btn btn-sm btn-info">Analyses</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h3 class="mt-5">Analyses Récentes</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Langage</th>
+                <th>Date</th>
+                <th>Fichier</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for analyse in analyses %}
+            <tr>
+                <td>{{ analyse.langage }}</td>
+                <td>{{ analyse.date_analyse.strftime('%d/%m/%Y') }}</td>
+                <td>{{ analyse.chemin_fichier }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
